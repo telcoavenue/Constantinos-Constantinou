@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constantinos Constantinou | Professional Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            accent: '#d97706', // warm gold accent
+                            accentHover: '#b45309'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Social & UI Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- Header / Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-slate-950 font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+                    CC
+                </div>
+                <span class="font-semibold text-lg tracking-tight text-slate-100">Constantinos Constantinou</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-amber-500 transition-colors">About</a>
+                <a href="#resume" class="hover:text-amber-500 transition-colors">Resume</a>
+                <a href="#academy" class="hover:text-amber-500 transition-colors">Waiters Academy</a>
+                <a href="#social" class="hover:text-amber-500 transition-colors">Channels</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-600 hover:bg-amber-500 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-amber-600/20">
+                    <i class="fa-solid fa-paper-plane text-xs"></i> Get in Touch
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-slate-300 hover:text-amber-500 font-medium py-1 mobile-link">About</a>
+            <a href="#resume" class="block text-slate-300 hover:text-amber-500 font-medium py-1 mobile-link">Resume</a>
+            <a href="#academy" class="block text-slate-300 hover:text-amber-500 font-medium py-1 mobile-link">Waiters Academy</a>
+            <a href="#social" class="block text-slate-300 hover:text-amber-500 font-medium py-1 mobile-link">Channels</a>
+            <a href="#contact" class="block text-slate-300 hover:text-amber-500 font-medium py-1 mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="pt-20">
+
+        <!-- 1. Hero / Welcome Section -->
+        <section id="about" class="py-20 lg:py-32 relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+            
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                    
+                    <!-- Profile Photo Frame -->
+                    <div class="relative group">
+                        <div class="absolute -inset-1.5 rounded-full bg-gradient-to-r from-amber-600 to-amber-400 opacity-75 blur group-hover:opacity-100 transition duration-500"></div>
+                        <div class="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-slate-900 shadow-2xl bg-slate-800 flex items-center justify-center">
+                            <!-- Local photo reference 3.jpg with fallback -->
+                            <img src="3.jpg" alt="Constantinos Constantinou" 
+                                 onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e293b/d97706?text=CC';" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+
+                    <!-- Welcome Text & Bio -->
+                    <div class="flex-1 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-wider mb-6">
+                            <i class="fa-solid fa-star text-[10px]"></i> Welcome to my Portfolio
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4">
+                            Hello, I'm <span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Constantinos Constantinou</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                            Professional hospitality expert, hospitality educator, and creator of <span class="text-amber-400 font-medium">Waiters Academy</span>. Passionate about elevating service standards, culinary hospitality excellence, and sharing professional mastery.
+                        </p>
+                        
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                            <a href="#resume" class="px-6 py-3 rounded-full bg-amber-600 hover:bg-amber-500 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-amber-600/20 flex items-center gap-2">
+                                <i class="fa-solid fa-file-pdf"></i> View Resume
+                            </a>
+                            <a href="#academy" class="px-6 py-3 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-graduation-cap text-amber-500"></i> Waiters Academy
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Resume / CV Download Section -->
+        <section id="resume" class="py-20 bg-slate-900/50 border-y border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-slate-900 rounded-3xl border border-slate-800 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                    <div class="absolute -right-16 -top-16 w-48 h-48 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-8">
+                        <div class="text-center sm:text-left">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 text-amber-400 text-xs font-medium mb-3">
+                                <i class="fa-solid fa-briefcase"></i> Professional Credentials
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">Curriculum Vitae</h2>
+                            <p class="text-slate-400 max-w-md">
+                                Explore my complete background, professional experience, certifications, and skills in detail by downloading my official PDF resume.
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                            <!-- Link to local PDF resume Constantinos Constantinou.pdf -->
+                            <a href="Constantinos Constantinou.pdf" target="_blank" rel="noopener noreferrer" 
+                               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-amber-600/20 group">
+                                <i class="fa-solid fa-file-arrow-down text-lg group-hover:-translate-y-0.5 transition-transform"></i>
+                                <span>Download PDF Resume</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Waiters Academy Showcase Section -->
+        <section id="academy" class="py-20 lg:py-28 relative">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Waiters Academy By Constantinos Constantinou</h2>
+                    <p class="text-slate-400 text-lg">
+                        Showcasing professional mastery, refined waiting techniques, fine dining etiquette, and modern hospitality training.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Fine Dining Service</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Advanced table settings, silver service etiquette, wine pairing mastery, and flawless guest relationship management.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Professional Training</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Comprehensive tutorials, tips, and guidelines designed to elevate aspiring hospitality professionals to industry leaders.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-900 rounded-2xl p-8 border border-slate-800 hover:border-amber-500/50 transition-all duration-300 group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Excellence Standards</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Cultivating high standards of customer satisfaction, speed, poise, and problem-solving in fast-paced environments.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="https://waiters-academy-online.blogspot.com/" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold text-base transition-all shadow-xl shadow-amber-600/20 group">
+                        <span>Visit Waiters Academy Blog</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Social Media & Professional Channels Section -->
+        <section id="social" class="py-16 bg-slate-900/50 border-y border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-2xl font-bold text-white mb-3">Connect Across Channels</h2>
+                <p class="text-slate-400 text-sm mb-8">Follow my professional insights, training tutorials, and daily updates online.</p>
+                
+                <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/this-is-constantinos/" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-3 px-6 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-[#0a66c2]/50 text-slate-200 hover:text-white transition-all group shadow-md">
+                        <i class="fa-brands fa-linkedin text-xl text-[#0a66c2] group-hover:scale-110 transition-transform"></i>
+                        <span class="font-medium text-sm">LinkedIn</span>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@This_is_Constantinos" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-3 px-6 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-[#ff0000]/50 text-slate-200 hover:text-white transition-all group shadow-md">
+                        <i class="fa-brands fa-youtube text-xl text-[#ff0000] group-hover:scale-110 transition-transform"></i>
+                        <span class="font-medium text-sm">YouTube</span>
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@thisisconstantinos" target="_blank" rel="noopener noreferrer"
+                       class="flex items-center gap-3 px-6 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-500 text-slate-200 hover:text-white transition-all group shadow-md">
+                        <i class="fa-brands fa-tiktok text-xl text-white group-hover:scale-110 transition-transform"></i>
+                        <span class="font-medium text-sm">TikTok</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Contact Me Form Section -->
+        <section id="contact" class="py-20 lg:py-28">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-slate-900 rounded-3xl border border-slate-800 p-8 sm:p-12 shadow-2xl relative">
+                    <div class="absolute top-0 right-1/4 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl pointer-events-none"></div>
+
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-extrabold text-white mb-2">Get in Touch</h2>
+                        <p class="text-slate-400 text-sm">
+                            Have an inquiry, collaboration proposal, or booking request? Send me a message directly at <span class="text-amber-400 font-medium">constantinos@constantinou.org</span>
+                        </p>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" required
+                                       class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-amber-500 transition-colors text-sm"
+                                       placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Your Email</label>
+                                <input type="email" id="email" name="email" required
+                                       class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-amber-500 transition-colors text-sm"
+                                       placeholder="john@example.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                   class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-amber-500 transition-colors text-sm"
+                                   placeholder="Inquiry regarding training or services">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-amber-500 transition-colors text-sm resize-none"
+                                      placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full py-4 rounded-xl bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold text-sm transition-all shadow-xl shadow-amber-600/20 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message to constantinos@constantinou.org
+                        </button>
+                    </form>
+
+                    <!-- Success Message Box -->
+                    <div id="formSuccess" class="hidden mt-6 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm text-center font-medium">
+                        <i class="fa-solid fa-circle-check mr-2"></i> Thank you! Your message has been prepared for transmission to <strong>constantinos@constantinou.org</strong>. (Opening your email client...)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-12 text-center text-slate-500 text-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <p class="font-medium text-slate-400">Constantinos Constantinou &bull; Hospitality Professional & Educator</p>
+            <p>&copy; <span id="currentYear"></span> All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Update copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Handle contact form submission via mailto action directed to constantinos@constantinou.org
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const recipient = 'constantinos@constantinou.org';
+            const mailtoSubject = encodeURIComponent(`[Portfolio Contact] ${subject}`);
+            const mailtoBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+            // Show success confirmation
+            formSuccess.classList.remove('hidden');
+
+            // Open mail client after brief delay
+            setTimeout(() => {
+                window.location.href = `mailto:${recipient}?subject=${mailtoSubject}&body=${mailtoBody}`;
+            }, 800);
+        });
+    </script>
+
+</body>
+</html>
